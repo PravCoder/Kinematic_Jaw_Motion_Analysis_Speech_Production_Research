@@ -10,20 +10,15 @@ disp("*UTTERANCE STRUCTURE INFO*")
 disp(utterance_struct); 
 
 
-% stores index of 'JAW' in struct's NAME field
-jaw_index = 0;
+% get index of 'jaw' element in NAME-field-col
+jaw_index = find(strcmp({utterance_struct.NAME}, 'JAW'));
 
-% Iterate values of field in sturct
+
+% iterate 
 disp("*ITERATE DISPLAY ALL VALUES OF A FIELD IN UTTERANCE STRUCT*")
 for i = 1:length(utterance_struct)   % get length of 
     disp(utterance_struct(i).NAME);  % struct_obj(row-idx).field_name
-    % if the cur-value-i in field-col is JAW, we found the JAW element in
-    % struct.NAME field. 
-    if strcmp(utterance_struct(i).NAME, 'JAW')
-        jaw_index = i;  
-    end
 end
-
 
 
 
