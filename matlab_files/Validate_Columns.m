@@ -24,6 +24,10 @@ for i = 1:length(utterance_struct)   % get length of
     end
 end
 
+% struct(name-field-jaw-index).field = all the jaws data
+jaw_data = utterance_struct(jaw_index).SIGNAL;
+disp(jaw_data);
+plot(jaw_data);
 
 
 
