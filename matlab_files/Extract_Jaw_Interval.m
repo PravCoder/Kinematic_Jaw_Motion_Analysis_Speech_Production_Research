@@ -17,10 +17,11 @@ function Extract_Jaw_Interval(mat_file_path, lab_file_path)
     disp("Above the endpoints of interval");
        
     % for now testing purposes hard code the endpoints & time-col, until we
-    % figure out the 
+    % figure out the time-col
     first_num = 2.807010122745389;
-    last_num = 2.822477731747881; 
-    time_col_indx = 3; % define index of time-column
+    last_num = 2.822477731747881;
+    
+    time_col_indx = 3; % define arbitary index of time-column
     
     % disp(jaw_data(:, time_col_indx));
     
@@ -54,3 +55,4 @@ end
 
 
 % call: Extract_Jaw_Interval('T19_T245_FSed_15_NH_A_13.mat', 'T19_T245_FSed_15_NH_A_13.tsv')
+% Extract_Jaw_Interval('T19_T3_SUet_1_NH_A_12.mat', 'T19_T3_SUet_1_NH_A_12.tsv')
